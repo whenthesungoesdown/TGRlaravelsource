@@ -1,0 +1,205 @@
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.footer {
+    font-family: "Roboto Slab", serif;
+}
+
+html,
+body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: 989px) {
+    body {
+        overflow-x: initial;
+    }
+}
+
+.logo {
+    width: 200px;
+}
+
+.navbar-nav,
+text-center {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* css for dropdown on hover */
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+    transition-timing-function: linear;
+}
+
+/* a:hover {
+    border-bottom-color: #64ebea;
+} */
+
+.extrabuttons {
+    float: end;
+}
+
+ion-icon {
+    font-size: 30px;
+    color: black;
+}
+
+ion-icon:hover {
+    color: grey;
+}
+
+/* //services overlay effect start */
+
+.overlay .title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: relative;
+    overflow: visible;
+}
+
+.content .content-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .content-image {
+        width: auto;
+        height: auto;
+    }
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 55%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.fadeIn-left {
+    left: 20%;
+}
+
+/* services overlay effect end */
+
+.wtgr {
+    height: 400px;
+    width: 400px;
+}
+
+.serial {
+    height: 100px;
+    width: 100px;
+}
+
+.productimage {
+    height: 300px;
+    width: 300px;
+}
+
+.footerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 106px;
+}
+
+@media only screen and (max-width: 767px) {
+    .footerimg {
+        width: auto;
+        height: auto;
+    }
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.aboutimg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+/* search bar styling */
+
+.corporatetop img,
+.contactusimg {
+    width: 100%;
+    height: auto;
+}
+
+.corporatetext {
+    font-family: "Roboto Slab";
+    font-size: 19px;
+    text-justify: auto;
+}
+
+.videoimg {
+    width: 100%;
+    height: auto;
+}
+
+#header {
+    background-image: url("../../Files/Image/loginformbg.jpg");
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* my css end */
