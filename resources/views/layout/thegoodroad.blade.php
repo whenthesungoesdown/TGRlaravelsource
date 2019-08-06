@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{asset('Files/CSS/owl.carousel.min.css')}}" />
         <link rel="stylesheet" href="{{asset('Files/CSS/owl.theme.default.min.css')}}" />
         <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
+        <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}">
     </head>
     <body>
             @include('components.navbar')

@@ -66,7 +66,7 @@
                             </ul>
                         </nav>
                         <div class="extrabuttons col-auto pt-2 mt-2 pr-0 mr-0">
-                            <a href="/user"><ion-icon name="person"></ion-icon></a>
+                            <a href="/existinguser"><ion-icon name="person"></ion-icon></a>
                             <a href="/wishlist"><ion-icon name="heart-empty"></ion-icon></a>
                             <a href="/cart"><ion-icon name="cart"></ion-icon></a>
                         </div>

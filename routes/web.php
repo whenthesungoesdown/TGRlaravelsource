@@ -51,7 +51,11 @@ Route::get('/privacy',function(){
     return view('pages/privacy');
 });
 
-Route::get('/user',function(){
-    return view('pages/user');
+Route::get('/existinguser',function(){
+    return view('pages/existinguser');
+});
+
+Route::get('/newuser',function(){
+    return view('pages/newuser');
 });
 

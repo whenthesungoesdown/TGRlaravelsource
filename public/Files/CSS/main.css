@@ -202,4 +202,45 @@ a:link {
     margin-right: auto;
 }
 
+/* .circle {
+    width: 75px;
+    height: 75px;
+    background-color: #ccc;
+    border-radius: 37.5px;
+} */
+
+/* custom box circle */
+/* .circleBig {
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    position: relative;
+}
+.circleSmall {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px; */
+/*
+      Put top edge and left edge in the center
+     */
+/* top: 50%;
+    left: 50%;
+    margin: -150px 0px 0px -150px; */
+/* 
+      Offset the position correctly with
+      minus half of the width and minus half of the height 
+     */
+/* } */
+
+/* .boxImage{
+    height: 250px;
+    width: 250px;
+    position: relative;
+
+} */
+
+
 /* my css end */
