@@ -25,6 +25,11 @@
                                         <input type="checkbox" class="form-check-input" id="checkBox1" />
                                         <label class="form-check-label" for="checkBox1">Remember Me</label>
                                     </div>
+                                    <div class="row justify-content-start  py-2 my-2">
+                                        <div class="col-12">
+                                            <a href="/resetpassword">Forgot Password? Reset here!</a>
+                                        </div>
+                                    </div>
                                     <button type="submit" class="btn btn-primary">Login</button>
                                 </div>
                             </div>
