@@ -25,12 +25,12 @@
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="">SHIPPING AND RETURN</a>
+                        <a class="text" href="/shippingandreturn">SHIPPING AND RETURN</a>
                     </div>
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="">TERMS AND CONDITION</a>
+                        <a class="text" href="/termsandconditions">TERMS AND CONDITION</a>
                     </div>
                 </div>
             </div>
@@ -79,3 +79,13 @@
                 </div>
             </div>
         </div>
+        <div class="row justify-content-md-end justify-content-sm-center">
+            <div class="col-sm-2">
+                <img src="{{asset('Files/Image/Payment (1).png')}}" alt="paymentmethods" class="py-1 my-1">
+                <img src="{{asset('Files/Image/Payment (2).png')}}" alt="paymentmethods" class="py-1 my-1">
+                <img src="{{asset('Files/Image/Payment (3).png')}}" alt="paymentmethods" class="py-1 my-1">
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -51,6 +51,14 @@ Route::get('/privacy',function(){
     return view('pages/privacy');
 });
 
+Route::get('/shippingandreturn',function(){
+    return view('pages/shippingandreturn');
+});
+
+Route::get('/termsandconditions',function(){
+    return view('pages/tandc');
+});
+
 Route::get('/existinguser',function(){
     return view('pages/existinguser');
 });
