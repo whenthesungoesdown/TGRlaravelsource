@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>The Good Road Lifestyle</title>
-        <link rel="icon" href="{{asset('Files/image/TGRtitlebar.ico')}}" type="image/x-icon" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/bootstrap.css')}}" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/main.css')}}" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/buttonstyle.css')}}" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLibre+Baskerville:400,700" rel="stylesheet" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/owl.carousel.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/owl.theme.default.min.css')}}" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
-        <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}">
-    </head>
-    <body>
-            @include('components.navbar')
-            @yield('content')
-            @include('components.brandingOwl')
-            @include('components.the3s')
-            @include('components.footer')
-        <!-- jQuerry>popper.js>bootstrap.js -->
-        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"
-        ></script>
-        <script src="{{asset('Files/JS/main.js')}}"></script>
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-        <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
-        <script>
-            $(document).ready(function() {
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>The Good Road Lifestyle</title>
+    <link rel="icon" href="{{asset('Files/image/TGRtitlebar.ico')}}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/bootstrap.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/main.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/buttonstyle.css')}}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLibre+Baskerville:400,700"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}">
+</head>
+
+<body>
+    @include('components.navbar')
+    @yield('content')
+    @include('components.brandingOwl')
+    @include('components.the3s')
+    @include('components.footer')
+    <!-- jQuerry>popper.js>bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="{{asset('Files/JS/main.js')}}"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
+    <script>
+        $(document).ready(function() {
                 $(".owl-carousel").owlCarousel({
                     margin: 10,
                     loop: true,
@@ -54,11 +53,26 @@
                     
                 });
             });
-        </script>
+    </script>
+    <script>
+        $(document).ready(function() {
+        // Loop through each nav item
+            $("nav.navbar").children("ul.nav").children("li").each(function(indexCount) {
+                // loop through each dropdown, count children and apply a animation delay based on their index value
+                $(this).children("ul.dropdown").children("li").each(function(index) {
+                // Turn the index value into a reasonable animation delay
+                    var delay = 0.1 + index * 0.03;
+        
+                    // Apply the animation delay
+                    $(this).css("animation-delay", delay + "s");
+                });
+            });
+        });
+    </script>
 
-        <!-- script for arrow toggle to jump to page-top -->
-        <script type="text/javascript">
-            var scrolltotop = {
+    <!-- script for arrow toggle to jump to page-top -->
+    <script type="text/javascript">
+        var scrolltotop = {
                 setting: { startline: 100, scrollto: 0, scrollduration: 1e3, fadeduration: [500, 100] },
                 controlHTML: '<ion-icon name="arrow-round-up" style="color:#64ebea; width: 55px; height:55px"></ion-icon>',
                 controlattrs: { offsetx: 5, offsety: 5 },
@@ -108,6 +122,9 @@
                 }
             };
             scrolltotop.init();
-        </script>
-    </body>
+    </script>
+    
+        
+</body>
+
 </html>

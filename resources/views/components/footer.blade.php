@@ -63,7 +63,7 @@
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="">CONTACT US</a>
+                        <a class="text" href="/contactus">CONTACT US</a>
                     </div>
                 </div>
             </div>
@@ -79,8 +79,11 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-md-end justify-content-sm-center">
-            <div class="col-sm-2">
+        <div class="row justify-content-right">
+            <div class="col-sm-6">
+                <p>&copy; <b>Copyright</b> by The Good Road. </p>
+            </div>
+            <div class="col-sm-6">
                 <img src="{{asset('Files/Image/Payment (1).png')}}" alt="paymentmethods" class="py-1 my-1">
                 <img src="{{asset('Files/Image/Payment (2).png')}}" alt="paymentmethods" class="py-1 my-1">
                 <img src="{{asset('Files/Image/Payment (3).png')}}" alt="paymentmethods" class="py-1 my-1">
