@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
             <div class="row justify-content-around align-items-center">
                 <div class="col-sm-12">
-                    <a class="navbar-brand" href="/"><img class="logo" src="{{asset('Files/image/TGRmainlogo.png')}}" alt=""/></a>
+                    <a class="navbar-brand" href="/"><img class="logo" src="{{ asset('Files/image/TGRmainlogo.png') }}" alt=""/></a>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </nav>
-
+    
         <div class="row justify-content-center pl-5 ml-5">
             <div class="col-md-auto">
                 <nav class="navbar navbar-expand-lg navbar-light">
@@ -29,7 +29,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
                                 </li>
-
+    
                                 <!-- dropdown -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -45,7 +45,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="monthlybox.html" aria-disabled="true">Monthly Box</a>
                                 </li>
-
+    
                                 <!-- dropdown -->
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -66,34 +66,37 @@
                             </ul>
                         </nav>
                         <div class="extrabuttons col-auto pt-2 mt-2 pr-0 mr-0">
-                                <nav>
-                                    <div class="navbar-nav">
-                                        <nav class="shift">
-                                            <ul class="navbar-nav mr-auto text">
-                                                <li class="nav-item dropdown">
-                                                    <a class="nav-link dropdown-toggle" href="/existinguser" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><ion-icon name="person"></ion-icon></a>
-                                                    <nav class="shift">
-                                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                            <a class="dropdown-item" href="/index">Profile</a>
-                                                            <a class="dropdown-item" href="#">MY orders</a>
-                                                            <a class="dropdown-item" href="#">Change password</a>
-                                                            <a class="dropdown-item" href="#">Logout</a>
-                                                        </div>
-                                                    </nav>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="/wishlist"><ion-icon name="heart-empty"></ion-icon></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="/cart"><ion-icon name="cart"></ion-icon></a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </nav>
-                            </div>
-                            
+                            <nav>
+                                <div class="navbar-nav">
+                                    <nav class="shift">
+                                        <ul class="navbar-nav mr-auto text">
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="/existinguser" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                                    ><ion-icon name="person"></ion-icon
+                                                ></a>
+                                                <nav class="shift">
+                                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                        <a class="dropdown-item" href="/index">Profile</a>
+                                                        <a class="dropdown-item" href="#">MY orders</a>
+                                                        <a class="dropdown-item" href="#">Change password</a>
+                                                        <a class="dropdown-item" href="#">Logout</a>
+                                                    </div>
+                                                </nav>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/wishlist"><ion-icon name="heart-empty"></ion-icon></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/cart"><ion-icon name="cart"></ion-icon></a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </nav>
+                        </div>
                     </div>
                 </nav>
             </div>
-        </div>  
+        </div>
+    </div>
+    
