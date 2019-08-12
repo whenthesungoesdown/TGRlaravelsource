@@ -66,10 +66,33 @@
                             </ul>
                         </nav>
                         <div class="extrabuttons col-auto pt-2 mt-2 pr-0 mr-0">
-                            <a href="/existinguser"><ion-icon name="person"></ion-icon></a>
-                            <a href="/wishlist"><ion-icon name="heart-empty"></ion-icon></a>
-                            <a href="/cart"><ion-icon name="cart"></ion-icon></a>
-                        </div>
+                                <nav>
+                                    <div class="navbar-nav">
+                                        <nav class="shift">
+                                            <ul class="navbar-nav mr-auto text">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="/existinguser" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><ion-icon name="person"></ion-icon></a>
+                                                    <nav class="shift">
+                                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                            <a class="dropdown-item" href="/index">Profile</a>
+                                                            <a class="dropdown-item" href="#">MY orders</a>
+                                                            <a class="dropdown-item" href="#">Change password</a>
+                                                            <a class="dropdown-item" href="#">Logout</a>
+                                                        </div>
+                                                    </nav>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/wishlist"><ion-icon name="heart-empty"></ion-icon></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/cart"><ion-icon name="cart"></ion-icon></a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+                            
                     </div>
                 </nav>
             </div>

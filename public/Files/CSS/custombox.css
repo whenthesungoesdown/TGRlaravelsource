@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 .container .card .card__head {
     color: black;
-    background: #64ebea;
+    background: #64ebeb;
     padding: 0.5em;
     transform: rotate(-90deg);
     transform-origin: 0% 0%;
@@ -44,7 +44,6 @@
     height: 100%;
     object-fit: cover;
     transition: all 1s ease-out;
-    /* filter: grayscale(100%); */
 }
 .container .card:not(:nth-child(5)) {
     margin-right: 1em;
@@ -63,4 +62,140 @@
 
 .stepsimg{
     width: 100%;
+} */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* ------------------------- Separate line ------------------------- */
+.circular-menu {
+    font-size: 20px;
+    width: 400px;
+    height: 250px;
+    margin-left: 10px;
+    margin-top: 40rem;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+.circular-menu__button {
+    display: none;
+}
+.circular-menu__button:checked + .circular-menu__icon {
+    -webkit-transform: scale(0.3, 0.3) translate3d(0, 0, 0);
+    transform: scale(0.5, 0.5) translate3d(0, 0, 0);
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.circular-menu__button:checked ~ .circular-menu__item {
+    transition-timing-function: cubic-bezier(0.935, 0, 0.34, 1.33);
+}
+.circular-menu__button:checked ~ .circular-menu__item:nth-of-type(1) {
+    transition-duration: 0.18s;
+    -webkit-transform: translate3d(0px, -200px, 0);
+    transform: translate3d(0px, -200px, 0);
+}
+.circular-menu__button:checked ~ .circular-menu__item:nth-of-type(2) {
+    transition-duration: 0.28s;
+    -webkit-transform: translate3d(99.86093418px, -32.446784369999996px, 0);
+    transform: translate3d(200px, -43px, 0px);
+}
+.circular-menu__button:checked ~ .circular-menu__item:nth-of-type(3) {
+    transition-duration: 0.38s;
+    -webkit-transform: translate3d(61.71745146px, 84.94678437px, 0);
+    transform: translate3d(-125px, 208px, 0px);
+}
+.circular-menu__button:checked ~ .circular-menu__item:nth-of-type(4) {
+    transition-duration: 0.48s;
+    -webkit-transform: translate3d(-61.71745146px, 84.94678437px, 0);
+    transform: translate3d(125px, 208px, 0px);
+}
+.circular-menu__button:checked ~ .circular-menu__item:nth-of-type(5) {
+    transition-duration: 0.58s;
+    -webkit-transform: translate3d(-99.86093418px, -32.446784369999996px, 0);
+    transform: translate3d(-200px, -43px, 0);
+}
+.circular-menu__icon {
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    width: 250px;
+    height: 250px;
+    line-height: 80px;
+    margin-left: 300px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform ease-out 0.2s;
+    transition: transform ease-out 0.2s;
+    transition: transform ease-out 0.2s, -webkit-transform ease-out 0.2s;
+    cursor: pointer;
+    -webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+.circular-menu__icon:hover {
+    -webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+.circular-menu__item {
+    background: white;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    width: 250px;
+    height: 250px;
+    line-height: 80px;
+    margin-left: 300px;
+    position: absolute;
+    text-align: center;
+    top: 300px;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition: -webkit-transform ease-out 0.2s;
+    transition: transform ease-out 0.2s;
+    transition: transform ease-out 0.2s, -webkit-transform ease-out 0.2s;
+    font-size: 32px;
+}
+.circular-menu__item:nth-of-type(1) {
+    transition-duration: 0.18s;
+}
+.circular-menu__item:nth-of-type(2) {
+    transition-duration: 0.18s;
+}
+.circular-menu__item:nth-of-type(3) {
+    transition-duration: 0.18s;
+}
+.circular-menu__item:nth-of-type(4) {
+    transition-duration: 0.18s;
+}
+.circular-menu__item:nth-of-type(5) {
+    transition-duration: 0.18s;
+}
+.circular-menu__item:hover {
+    color: #73d0d7;
+    background: #73d0d7ab;
+}
+.circular-menu__item:active,
+.circular-menu__item:focus {
+    color: #73d0d7;
+}
+
+
+.boximg {
+    width: 200px;
+    height: 200px;
+}
+
+.selected {
+    border: 3px solid #64ebea;
+    width: 200px;
+    height: 200px;
 }
