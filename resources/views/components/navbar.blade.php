@@ -1,4 +1,4 @@
-<!-- navbar -->
+{{-- <!-- navbar -->
 <div class="container-fluid px-0 mx-0">
         <!-- main logo bar -->
         <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
@@ -20,14 +20,14 @@
             </div>
         </nav>
     
-        <div class="row justify-content-center pl-5 ml-5">
+        <div class="row justify-content-around pl-5 ml-5">
             <div class="col-md-auto">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="collapse navbar-collapse py-0 my-0" id="navbarSupportedContent">
                         <nav class="shift">
                             <ul class="navbar-nav mr-auto text">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/about">About Us <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="/about">About Us</a>
                                 </li>
     
                                 <!-- dropdown -->
@@ -99,4 +99,56 @@
             </div>
         </div>
     </div>
-    
+     --}}
+
+
+
+
+     <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
+            <div class="row justify-content-around align-items-center">
+                <div class="col-sm-12">
+                    <a class="navbar-brand" href="/"><img class="logo" src="{{ asset('Files/image/TGRmainlogo.png') }}" alt=""/></a>
+                </div>
+            </div>
+        </nav>
+     <nav class="menu">
+            <ol>
+                <li class="menu-item">
+                    <a href="/about">About Us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#0">Shop</a>
+                    <ol class="sub-menu">
+                        <li class="menu-item"><a href="/prepacked">Pre Packed Boxes</a></li>
+                        <li class="menu-item"><a href="/custombox">Make Your Own Box</a></li>
+                    </ol>
+                </li>
+                <li class="menu-item">
+                    <a href="/monthlybox">monthly Box</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#0">Services</a>
+                    <ol class="sub-menu">
+                        <li class="menu-item"><a href="/corporate">Corporate</a></li>
+                        <li class="menu-item"><a href="/wedding">Weddings</a></li>
+                        <li class="menu-item"><a href="/allotheroccasions">All Other Occasions</a></li>
+                        <li class="menu-item"><a href="/giftcard">Gift Card</a></li>
+                    </ol>
+                </li>
+                <li class="menu-item"><a href="/contactus">Contact Us</a></li>
+                
+                <li class="menu-item">
+                        <a href="#0"><ion-icon name="person"></ion-icon></a>
+                        <ol class="sub-menu">
+                            <li class="menu-item"><a href="/">Profile</a></li>
+                            <li class="menu-item"><a href="/">My Orders</a></li>
+                            <li class="menu-item"><a href="/">Change Password</a></li>
+                            <li class="menu-item"><a href="/">Logout</a></li>
+                        </ol>
+                    </li>
+                
+                <li class="menu-item"><a href="/contactus"><ion-icon name="heart-empty"></ion-icon></a></li>
+                <li class="menu-item"><a href="/contactus"><ion-icon name="cart"></ion-icon></a></li>
+            </ol>
+        </nav>
+        

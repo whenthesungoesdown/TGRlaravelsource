@@ -69,7 +69,6 @@
 *::after {
     box-sizing: border-box;
 }
-/* ------------------------- Separate line ------------------------- */
 .circular-menu {
     font-size: 20px;
     width: 400px;
@@ -180,8 +179,8 @@
     transition-duration: 0.18s;
 }
 .circular-menu__item:hover {
-    color: #73d0d7;
-    background: #73d0d7ab;
+    color: #37979e;
+    background: #838888ab;
 }
 .circular-menu__item:active,
 .circular-menu__item:focus {
