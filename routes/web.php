@@ -63,7 +63,15 @@ Route::get('/existinguser',function(){
     return view('pages/existinguser');
 });
 
+Route::get('/cart',function(){
+    return view('pages/cart');
+});
+
 Route::get('/newuser',function(){
     return view('pages/newuser');
+});
+
+Route::get('/resetpassword',function(){
+    return view('pages/forgotpassword');
 });
 

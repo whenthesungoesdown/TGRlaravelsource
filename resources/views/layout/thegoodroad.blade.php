@@ -27,6 +27,8 @@
     @include('components.footer')
     <!-- jQuerry>popper.js>bootstrap.js -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -36,39 +38,9 @@
     <script src="{{asset('Files/JS/main.js')}}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
-    <script>
-        $(document).ready(function() {
-                $(".owl-carousel").owlCarousel({
-                    margin: 10,
-                    loop: true,
-                    autoWidth: true,
-                    items: 1,
-                    margin: 10,
-                    autoHeight: true,
-                    items: 4,
-                    autoplay: true,
-                    autoplayTimeout: 1000,
-                    autoplayHoverPause: true,
-                    center: true,
-                    
-                });
-            });
-    </script>
-    <script>
-        $(document).ready(function() {
-        // Loop through each nav item
-            $("nav.navbar").children("ul.nav").children("li").each(function(indexCount) {
-                // loop through each dropdown, count children and apply a animation delay based on their index value
-                $(this).children("ul.dropdown").children("li").each(function(index) {
-                // Turn the index value into a reasonable animation delay
-                    var delay = 0.1 + index * 0.03;
-        
-                    // Apply the animation delay
-                    $(this).css("animation-delay", delay + "s");
-                });
-            });
-        });
-    </script>
+    <script src="{{asset('Files/JS/cart.js')}}"></script>
+    
+
 
     <!-- script for arrow toggle to jump to page-top -->
     <script type="text/javascript">
