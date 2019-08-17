@@ -95,8 +95,6 @@
             };
             scrolltotop.init();
     </script>
-    
-        
 </body>
 
 </html>

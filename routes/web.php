@@ -75,3 +75,7 @@ Route::get('/resetpassword',function(){
     return view('pages/forgotpassword');
 });
 
+Route::get('/product',function(){
+    return view('pages/productlayout');
+});
+
