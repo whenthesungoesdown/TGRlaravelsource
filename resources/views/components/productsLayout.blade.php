@@ -1,4 +1,4 @@
-<!-- featured prodcuts section -->
+{{-- <!-- featured prodcuts section -->
 <div class="pt-3 mt-3">
     <h3 class="text-center">FEATURED PRODUCTS</h3>
     <P class="text-center">Featured collection curated by our experts</P>
@@ -7,7 +7,7 @@
 <div class="conatiner-fluid pr-4 mr-4">
     <div class="row justify-content-around">
     
-        {{-- <div class="col-sm-12 col-md-4 col-lg-2">
+        <div class="col-sm-12 col-md-4 col-lg-2">
             <img class="productimage" src="{{asset('Files/image/cuttingchaiglass.jpg')}}" alt="" />
             <h5 class="producttitle text-center">Terracotta Cutting Chai Glass</h5>
             <p class="text-center">₹<span class="price">400</span>.00</p>
@@ -26,9 +26,9 @@
             <img class="productimage" src="{{asset('Files/image/preshavescrub.jpg')}}" alt="" />
             <h5 class="producttitle text-center">Pre Shave Scrub</h5>
             <p class="text-center">₹<span class="price">245</span>.00</p>
-        </div> --}}
+        </div>
     </div>
-    {{-- <div class="row justify-content-around">
+    <div class="row justify-content-around">
         <div class="col-sm-12 col-md-4 col-lg-2">
             <img class="productimage" src="{{asset('Files/image/girlbossnotebook.jpg')}}" alt="" />
             <h5 class="producttitle text-center">Girl Boss Binded Notebook</h5>
@@ -51,3 +51,16 @@
         </div>
     </div>
 </div> --}}
+
+<h1>products</h1>
+@if(count($products) > 1)
+    @foreach($products as $product)
+        <img src="{{$product->img1}}" alt="">
+        <p>{{$product->title}}</p>
+        <p>{{$product->price}}</p>
+    @endforeach
+@else
+
+    <p>no products</p>
+
+@endif

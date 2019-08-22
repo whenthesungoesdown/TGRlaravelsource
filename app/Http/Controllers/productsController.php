@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\product;
 
-class productsController extends Controller
+class ProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class productsController extends Controller
      */
     public function index()
     {
-        //
+        $products = product::all();
+        return view('pages.home')->with('products' , $products);
     }
 
     /**

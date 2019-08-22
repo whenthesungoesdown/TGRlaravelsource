@@ -15,6 +15,8 @@
 //     return view('pages/home');
 // });
 
+Route::resource('/','ProductsController');
+
 Route::get('/about',function(){
     return view('pages/about');
 });
@@ -78,4 +80,6 @@ Route::get('/resetpassword',function(){
 Route::get('/product',function(){
     return view('pages/productlayout');
 });
+
+
 
