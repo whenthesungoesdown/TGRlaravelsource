@@ -29,15 +29,15 @@
         </div>
     </div>
 @endsection --}}
-@extends('layout.thegoodroad')
+{{-- @extends('layout.thegoodroad')
 @section('content')
 <div class="container">
     <div class="row align-items-center">
         <div class="col-12">
             <nav class="circular-menu">
                 <input class="circular-menu__button" id="circular-menu" type="checkbox" href="javascript: void 0" checked="checked" />
-                <label class="circular-menu__icon selected" for="circular-menu">
-                    <img class="boximg" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
+                <label class="circular-menu__icon boximg" for="circular-menu">
+                    <img class="" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
                 </label>
                 <a class="circular-menu__item" href="#">
                     <img class="boximg" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
@@ -58,6 +58,53 @@
         </div>
         <div class="col-6"></div>
     </div>
+</div>
+
+@endsection --}}
+
+
+
+
+@extends('layout.thegoodroad')
+@section('content')
+
+<div class="container-fluid px-2 mx-0 main">
+    <p class="text-main text-center py-2 my-2">
+        Step:1</br> Select one of the boxes below.
+    </p>
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="row justify-content-between">
+                <div class="col">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box2.png')}}" alt="">
+                </div>
+                <div class="col">
+                    <img class="boximg mt-5" src="{{asset('Files/Image/customBox/box3.png')}}" alt="">
+                </div>
+                <div class="col">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box4.png')}}" alt="">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box5.png')}}" alt="">
+                </div>
+                <div class="col">
+                    <p class="text-main pt-5 mt-5">+</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="added-to-cart">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <p class="text-main text-center py-2 my-2">
+        Step:2</br> Select items from below to add into your box.
+    </p>
 </div>
 
 @endsection
