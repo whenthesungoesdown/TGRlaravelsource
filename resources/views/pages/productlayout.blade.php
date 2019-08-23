@@ -43,6 +43,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row justify-content-start">
+                        <div class="col-1"><a href="#"><ion-icon name="heart-empty"></ion-icon></a></div>
+                        <div class="col-1"><a href="#"><ion-icon name="cart"></ion-icon></a></div>
+                    </div>
                 </li>
             </ul>
         </div>
