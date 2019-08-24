@@ -20,12 +20,12 @@ class CreateProductsTable extends Migration
             $table->string('brand');
             $table->integer('price');
             $table->string('category');
-            $table->integer('weight')->default(NULL)->nullable();
-            $table->string('note')->default(NULL)->nullable();
-            $table->string('material')->default(NULL)->nullable();
-            $table->binary('pic1')->default(NULL)->nullable();
-            $table->binary('pic2')->default(NULL)->nullable();
-            $table->binary('pic3')->default(NULL)->nullable();
+            $table->integer('weight')->nullable();
+            $table->string('note')->nullable();
+            $table->string('material')->nullable();
+            $table->string('pic1')->nullable();
+            $table->string('pic2')->nullable();
+            $table->string('pic3')->nullable();
             $table->timestampsTz();
         });
     }

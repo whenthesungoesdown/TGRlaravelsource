@@ -1,34 +1,43 @@
 @extends('layout.thegoodroad')
 @section('content')
-<div class="container pt-5 mt-5">
+<div class="container px-5 mx-5 mb-5">
     <div class="row jsutify-content-center">
         <div class="col-12">
-            <p class="text-center main-text">PASTEL VIBRANCE NOTEBOOK</p>
+            <p class="text-center main-text">{{$product->title}}</p>
         </div>
     </div>
     <div class="row jsutify-content-center">
         <div class="col-12">
-            <p class="text-center sub-text">By CREATIVE MIDDLE</p>
+            <p class="text-center sub-text">By {{$product->brand}}</p>
         </div>
     </div>
     <div class="row justify-content-around">
         <div class="col-sm-12 col-md-6">
-            <img class="product-description-image" src="{{asset('files/image/pastelvibrancenotebook.jpg')}}" alt="">
+            <div class="exzoom" id="exzoom">
+                <div class="exzoom_img_box">
+                    <ul class='exzoom_img_ul'>
+                        <li><img src="{{$product->pic1}}"/></li>
+                        <li><img src="{{$product->pic2}}"/></li>
+                        <li><img src="{{$product->pic3}}"/></li>
+                    </ul>
+                </div>
+                <div class="exzoom_nav"></div>
+            </div>
         </div>
         <div class="about-product col-sm-12 col-md-6">
             <ul>
                 <li>
-                    <p class="product-price">₹<span class="price">399</span>.00</p>
+                    <p class="product-price" style="font-size:30px"><b>₹{{$product->price}}.00</b></p>
+                </li>
+               
+                <li>
+                    <p class="description">{{$product->description}}</p>
                 </li>
                 <li>
-                    <p class="description">The Pastel Vibrance journal features a vivacious full-colour geometric cover.
-                        Its packed with 128 blank pages for your big ideas.</p>
+                    <p class="specification"><b>Specifications-</b> {{$product->note}}</p>
                 </li>
                 <li>
-                    <p class="specification"><b>Specifications</b> -128 Blank Pages</p>
-                </li>
-                <li>
-                    <p class="note"><b>Note</b> -0</p>
+                    <p class="material"><b>Material -</b> {{$product->material}}</p>
                 </li>
                 <li>
                     <div class="row justify-content-around">

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('Files/CSS/bootstrap.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/main.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/buttonstyle.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/jquery.exzoom.css')}}" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CLibre+Baskerville:400,700"
         rel="stylesheet" />
@@ -38,6 +39,7 @@
     <script src="{{asset('Files/JS/main.js')}}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
     <script src="{{asset('Files/JS/cart.js')}}"></script>
     
 
@@ -95,6 +97,34 @@
             };
             scrolltotop.init();
     </script>
+    <script>
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel({
+                    margin: 10,
+                    loop: true,
+                    autoWidth: true,
+                    items: 1,
+                    margin: 10,
+                    autoHeight: true,
+                    items: 4,
+                    autoplay: true,
+                    autoplayTimeout: 1000,
+                    autoplayHoverPause: true,
+                    center: true,
+                    
+                });
+            });
+        </script>
+        <script>
+            $("#exzoom").exzoom({
+                "navWidth": 60,
+                "navHeight": 60,
+                "navItemNum": 5,
+                "navItemMargin": 7,
+                "navBorder": 1,
+                "autoPlay": true,
+                });
+        </script>
 </body>
 
 </html>

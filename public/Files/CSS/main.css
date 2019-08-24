@@ -144,10 +144,20 @@ ion-icon:hover {
 }
 
 .productimage {
-    height: 250px;
-    width: 250px;
+    height: 220px;
+    width: 220px;
 }
 
+.producttitle{
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+
+.price{
+    font-weight: 700;
+    margin-left: 40px;
+}
 .footerimg {
     display: block;
     margin-left: auto;

@@ -147,7 +147,7 @@
     </div>
 
     <!-- products layout -->
-    @include('components.productsLayout');
+    @include('components.productsLayout')
 
 
     <!-- pre-created boxes -->

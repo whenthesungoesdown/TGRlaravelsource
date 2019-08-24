@@ -16,6 +16,7 @@
 // });
 
 Route::resource('/','ProductsController');
+Route::get('/{id}', 'ProductsController@show');
 
 Route::get('/about',function(){
     return view('pages/about');
@@ -77,9 +78,13 @@ Route::get('/resetpassword',function(){
     return view('pages/forgotpassword');
 });
 
-Route::get('/product',function(){
-    return view('pages/productlayout');
-});
+// Route::get('/product',function(){
+//     return view('pages/productlayout');
+// });
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
