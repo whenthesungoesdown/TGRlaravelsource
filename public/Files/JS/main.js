@@ -10,8 +10,6 @@ for (var i = 0; i < boxes.length; i++) {
     });
 }
 
-
-
 var minus = document.querySelector(".minus");
 var plus = document.querySelector(".plus");
 var quantity = document.querySelector(".productQty");

@@ -16,9 +16,9 @@
             <div class="exzoom" id="exzoom">
                 <div class="exzoom_img_box">
                     <ul class='exzoom_img_ul'>
-                        <li><img src="{{$product->pic1}}"/></li>
-                        <li><img src="{{$product->pic2}}"/></li>
-                        <li><img src="{{$product->pic3}}"/></li>
+                        <li><img src="{{$product->pic1}}" /></li>
+                        <li><img src="{{$product->pic2}}" /></li>
+                        <li><img src="{{$product->pic3}}" /></li>
                     </ul>
                 </div>
                 <div class="exzoom_nav"></div>
@@ -29,16 +29,20 @@
                 <li>
                     <p class="product-price" style="font-size:30px"><b>₹{{$product->price}}.00</b></p>
                 </li>
-               
+
                 <li>
                     <p class="description">{{$product->description}}</p>
                 </li>
+                @if(count($product->note) > 0)
                 <li>
-                    <p class="specification"><b>Specifications-</b> {{$product->note}}</p>
+                    <p class="specification"><b>Specifications -</b> {{$product->note}}</p>
                 </li>
+                @endif
+                @if(count($product->material) > 0)
                 <li>
                     <p class="material"><b>Material -</b> {{$product->material}}</p>
                 </li>
+                @endif
                 <li>
                     <div class="row justify-content-around">
                         <div class="col-6">
@@ -53,8 +57,12 @@
                         </div>
                     </div>
                     <div class="row justify-content-start">
-                        <div class="col-1"><a href="#"><ion-icon name="heart-empty"></ion-icon></a></div>
-                        <div class="col-1"><a href="#"><ion-icon name="cart"></ion-icon></a></div>
+                        <div class="col-1"><a href="#">
+                                <ion-icon class="wishlist" name="heart-empty"></ion-icon>
+                            </a></div>
+                        <div class="col-1"><a href="#">
+                                <ion-icon class="cart" name="cart"></ion-icon>
+                            </a></div>
                     </div>
                 </li>
             </ul>

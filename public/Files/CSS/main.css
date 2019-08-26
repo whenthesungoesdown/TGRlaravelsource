@@ -148,13 +148,13 @@ ion-icon:hover {
     width: 220px;
 }
 
-.producttitle{
+.producttitle {
     font-size: 15px;
     font-weight: 400;
     margin-left: 40px;
 }
 
-.price{
+.price {
     font-weight: 700;
     margin-left: 40px;
 }
@@ -367,26 +367,30 @@ a:link {
 .btn {
     background-color: #73d0d7;
 }
- .btn a{
-     color: white;
- }
+.btn a {
+    color: white;
+}
 
- .main-text{
-     font-family: 'Roboto', slab;
-     font-size: 40px;
-     padding: 0;
-     margin: 0;
- }
+.main-text {
+    font-family: "Roboto", slab;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+}
 
- .sub-text{
-     font-family: "Poppins", sans-serif;
- }
+.sub-text {
+    font-family: "Poppins", sans-serif;
+}
 
- .product-description-image{
-    padding: 5px; 
+.product-description-image {
+    padding: 5px;
     width: 100%;
- }
+}
 
- .about-product ul{
-     list-style: none;
- }
+.about-product ul {
+    list-style: none;
+}
+
+.hover-img img:hover {
+    color: blue;
+}

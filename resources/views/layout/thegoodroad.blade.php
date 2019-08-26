@@ -16,6 +16,7 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('Files/CSS/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/sweetalert2.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}">
 </head>
@@ -39,6 +40,7 @@
     <script src="{{asset('Files/JS/main.js')}}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('Files/JS/sweetalert2.all.js')}}"></script>
     <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
     <script src="{{asset('Files/JS/cart.js')}}"></script>
     

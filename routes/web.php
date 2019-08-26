@@ -15,7 +15,7 @@
 //     return view('pages/home');
 // });
 
-Route::resource('/','ProductsController');
+Route::get('/','ProductsController@index');
 Route::get('/{id}', 'ProductsController@show');
 
 Route::get('/about',function(){
