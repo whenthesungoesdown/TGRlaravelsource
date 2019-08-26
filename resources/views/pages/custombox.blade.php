@@ -93,12 +93,12 @@
         </div>
         <div class="col-6">
             <div class="added-to-cart">
-                <img src="" alt="boxImage">
-                <img src="" alt="boxImage">
-                <img src="" alt="boxImage">
-                <img src="" alt="boxImage">
-                <img src="" alt="boxImage">
-                <img src="" alt="boxImage">
+                <img class="selectedProducts" src="" alt="image">
+                <img class="selectedProducts" src="" alt="image">
+                <img class="selectedProducts" src="" alt="image">
+                <img class="selectedProducts" src="" alt="image">
+                <img class="selectedProducts" src="" alt="image">
+                <img class="selectedProducts" src="" alt="image">
             </div>
         </div>
     </div>

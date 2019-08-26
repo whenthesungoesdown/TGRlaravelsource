@@ -15,8 +15,15 @@
 //     return view('pages/home');
 // });
 
-Route::get('/','ProductsController@index');
-Route::get('/{id}', 'ProductsController@show');
+Route::resource('/','ProductsController');
+// Route::get('/{id}', 'ProductsController@show');
+// Route::get('/create', 'ProductsController@create');
+// Route::get('/store', 'ProductsController@store');
+// Route::get('/edit', 'ProductsController@edit');
+// Route::get('/update', 'ProductsController@update');
+// Route::get('/destroy', 'ProductsController@destroy');
+
+
 
 Route::get('/about',function(){
     return view('pages/about');
@@ -78,13 +85,25 @@ Route::get('/resetpassword',function(){
     return view('pages/forgotpassword');
 });
 
-// Route::get('/product',function(){
-//     return view('pages/productlayout');
-// });
 
 
+/*----------------------ROUTES FOR LOGIN & REGISTER-------------------------------------*/
+Route::get('/reg','RegisterAuthController@showRegister')->name('reg');
+Route::post('/reg','RegisterAuthController@registration');
+Route::get('/log','Auth\LoginController@showLogin')->name('log');
+Route::post('/log','Auth\LoginController@login');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+/*----------------------ROUTES FOR CART-------------------------------------*/
+Route::get('/products', 'ProductsController@index');
+Route::get('/cart', 'ProductsController@cart')->name('cart');
+Route::post('/add-to-cart', 'ProductsController@add_to_cart')->name('addtocart');
+Route::get('/product_page','ProductsController@showProduct')->name('product_page');
+/*-----------------------FORGOT-PASSWORD--------------------------------------*/ 
+ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+ Route::get('/mail','SendEmailController@send');
+// Auth::routes();
 
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/existinguser', 'HomeController@index')->name('home');

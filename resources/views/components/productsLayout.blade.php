@@ -9,47 +9,47 @@
     
         <div class="col-sm-12 col-md-4 col-lg-2">
             <img class="productimage" src="{{asset('Files/image/cuttingchaiglass.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Terracotta Cutting Chai Glass</h5>
-            <p class="text-center">₹<span class="price">400</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/hibiscusgreentea.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Hibiscus Green Tea</h5>
-            <p class="text-center">₹<span class="price">399</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/pastelvibrancenotebook.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Pastel Vibrance NOtebook</h5>
-            <p class="text-center">₹<span class="price">250</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/preshavescrub.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Pre Shave Scrub</h5>
-            <p class="text-center">₹<span class="price">245</span>.00</p>
-        </div>
+<h5 class="producttitle text-center">Terracotta Cutting Chai Glass</h5>
+<p class="text-center">₹<span class="price">400</span>.00</p>
+</div>
+<div class="col-sm-12 col-md-4 col-lg-2">
+    <img class="productimage" src="{{asset('Files/image/hibiscusgreentea.jpg')}}" alt="" />
+    <h5 class="producttitle text-center">Hibiscus Green Tea</h5>
+    <p class="text-center">₹<span class="price">399</span>.00</p>
+</div>
+<div class="col-sm-12 col-md-4 col-lg-2">
+    <img class="productimage" src="{{asset('Files/image/pastelvibrancenotebook.jpg')}}" alt="" />
+    <h5 class="producttitle text-center">Pastel Vibrance NOtebook</h5>
+    <p class="text-center">₹<span class="price">250</span>.00</p>
+</div>
+<div class="col-sm-12 col-md-4 col-lg-2">
+    <img class="productimage" src="{{asset('Files/image/preshavescrub.jpg')}}" alt="" />
+    <h5 class="producttitle text-center">Pre Shave Scrub</h5>
+    <p class="text-center">₹<span class="price">245</span>.00</p>
+</div>
+</div>
+<div class="row justify-content-around">
+    <div class="col-sm-12 col-md-4 col-lg-2">
+        <img class="productimage" src="{{asset('Files/image/girlbossnotebook.jpg')}}" alt="" />
+        <h5 class="producttitle text-center">Girl Boss Binded Notebook</h5>
+        <p class="text-center">₹<span class="price">250</span>.00</p>
     </div>
-    <div class="row justify-content-around">
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/girlbossnotebook.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Girl Boss Binded Notebook</h5>
-            <p class="text-center">₹<span class="price">250</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/choclatebar.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Himalyan Fruit and Nut Choclate Bar</h5>
-            <p class="text-center">₹<span class="price">335</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/aftershavebalm.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Oudh Wood Hydrating Gel <br />After shave Bar</h5>
-            <p class="text-center">₹<span class="price">250</span>.00</p>
-        </div>
-        <div class="col-sm-12 col-md-4 col-lg-2">
-            <img class="productimage" src="{{asset('Files/image/tweeterglass.jpg')}}" alt="" />
-            <h5 class="producttitle text-center">Tweeter Glasses</h5>
-            <p class="text-center">₹<span class="price">545</span>.00</p>
-        </div>
+    <div class="col-sm-12 col-md-4 col-lg-2">
+        <img class="productimage" src="{{asset('Files/image/choclatebar.jpg')}}" alt="" />
+        <h5 class="producttitle text-center">Himalyan Fruit and Nut Choclate Bar</h5>
+        <p class="text-center">₹<span class="price">335</span>.00</p>
     </div>
+    <div class="col-sm-12 col-md-4 col-lg-2">
+        <img class="productimage" src="{{asset('Files/image/aftershavebalm.jpg')}}" alt="" />
+        <h5 class="producttitle text-center">Oudh Wood Hydrating Gel <br />After shave Bar</h5>
+        <p class="text-center">₹<span class="price">250</span>.00</p>
+    </div>
+    <div class="col-sm-12 col-md-4 col-lg-2">
+        <img class="productimage" src="{{asset('Files/image/tweeterglass.jpg')}}" alt="" />
+        <h5 class="producttitle text-center">Tweeter Glasses</h5>
+        <p class="text-center">₹<span class="price">545</span>.00</p>
+    </div>
+</div>
 </div> --}}
 
 <div class="pt-3 mt-3">
@@ -61,20 +61,20 @@
 
 <div class="conatiner-fluid pr-4 mr-4">
     @foreach($products->chunk(4) as $items)
-        <div class="row justify-content-around">
-            @if(count($items) > 0)
-                @foreach($items as $item)
-                    <div class="col-sm-12 col-md-4 col-lg-2">
-                        <div class="hover-img">
-                            <a href="/{{$item->id}}"><img class="productimage" src="{{$item->pic1}}" alt=""></a>
-                            <h5 class="producttitle text-center">{{$item->title}}</h5>
-                            <p class="text-center price">₹{{$item->price}}.00</p>
-                        </div>
-                    </div>
-                @endforeach
-            @else
-                <p>no products</p>
-            @endif
+    <div class="row justify-content-around">
+        @if(count($items) > 0)
+        @foreach($items as $item)
+        <div class="col-sm-12 col-md-4 col-lg-2">
+            <div class="hover-img">
+                <a href="/{{$item->id}}"><img class="productimage" src="{{$item->pic1}}" alt=""></a>
+                <h5 class="producttitle text-center">{{$item->title}}</h5>
+                <p class="text-center price">₹{{$item->price}}.00</p>
+            </div>
         </div>
+        @endforeach
+        @else
+        <p>no products</p>
+        @endif
+    </div>
     @endforeach
 </div>
