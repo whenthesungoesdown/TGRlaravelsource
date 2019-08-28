@@ -60,7 +60,7 @@
                         <div class="col-1"><a href="#">
                                 <ion-icon class="wishlist" name="heart-empty"></ion-icon>
                             </a></div>
-                        <div class="col-1"><a href="#">
+                        <div class="col-1"><a href="/add-to-cart">
                                 <ion-icon class="cart" name="cart"></ion-icon>
                             </a></div>
                     </div>

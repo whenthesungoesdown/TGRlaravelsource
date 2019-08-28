@@ -124,7 +124,7 @@
                 "navItemNum": 5,
                 "navItemMargin": 7,
                 "navBorder": 1,
-                "autoPlay": true,
+                "autoPlay": false
                 });
         </script>
 </body>
