@@ -18,18 +18,23 @@
     <link rel="stylesheet" href="{{asset('Files/CSS/owl.theme.default.min.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/sweetalert2.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
-    <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}">
+    <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}" />
 </head>
 
 <body>
+
+
     @include('components.navbar')
     @yield('content')
     @include('components.brandingOwl')
     @include('components.the3s')
     @include('components.footer')
+
+
     <!-- jQuerry>popper.js>bootstrap.js -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -42,8 +47,14 @@
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
     <script src="{{asset('Files/JS/sweetalert2.all.js')}}"></script>
     <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
+    <script src="{{asset('Files/JS/debug.addIndicators.min.js')}}"></script> --}}
+
     <script src="{{asset('Files/JS/cart.js')}}"></script>
-    
+    <script src="{{asset('Files/JS/custombox.js')}}"></script>
+
 
 
     <!-- script for arrow toggle to jump to page-top -->
@@ -100,7 +111,7 @@
             scrolltotop.init();
     </script>
     <script>
-            $(document).ready(function() {
+        $(document).ready(function() {
                 $(".owl-carousel").owlCarousel({
                     margin: 10,
                     loop: true,
@@ -116,9 +127,9 @@
                     
                 });
             });
-        </script>
-        <script>
-            $("#exzoom").exzoom({
+    </script>
+    <script>
+        $("#exzoom").exzoom({
                 "navWidth": 60,
                 "navHeight": 60,
                 "navItemNum": 5,
@@ -126,7 +137,8 @@
                 "navBorder": 1,
                 "autoPlay": false
                 });
-        </script>
+    </script>
+    
 </body>
 
 </html>

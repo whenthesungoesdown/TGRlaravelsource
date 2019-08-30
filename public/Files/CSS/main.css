@@ -34,7 +34,7 @@ text-center {
 /* css for dropdown on hover */
 .navbar-nav li:hover .dropdown-menu {
     display: block;
-    transition-timing-function: linear;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 /* a:hover {

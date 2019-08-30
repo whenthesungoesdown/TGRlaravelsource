@@ -68,25 +68,25 @@
 @extends('layout.thegoodroad')
 @section('content')
 
-<div class="container-fluid px-2 mx-0 main">
-    <p class="text-main text-center py-2 my-2">
+{{-- <div class="container-fluid px-2 mx-0 main"> --}}
+    {{-- <p class="text-main text-center py-2 my-2">
         Step:1</br> Select one of the boxes below.
     </p>
     <div class="row justify-content-center">
-        <div class="col-6">
+        <div class="col-6 pl-5">
             <div class="row justify-content-between">
-                <div class="col">
-                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
+                <div class="col-3 px-0 mx-0">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box3.png')}}" alt="">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box2.png')}}" alt="">
                 </div>
-                <div class="col">
-                    <img class="boximg mt-5" src="{{asset('Files/Image/customBox/box3.png')}}" alt="">
+                <div class="col-3 px-0 mx-0">
+                    <img class="boximg mt-5" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
                 </div>
-                <div class="col">
+                <div class="col-3 px-0 mx-0">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box4.png')}}" alt="">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box5.png')}}" alt="">
                 </div>
-                <div class="col">
+                <div class="col-3 px-0 mx-0">
                     <p class="text-main pt-5 mt-5">+</p>
                 </div>
             </div>
@@ -105,6 +105,22 @@
     <p class="text-main text-center py-2 my-2">
         Step:2</br> Select items from below to add into your box.
     </p>
+</div> --}}
+<div id="pinContainer">
+	<div id="slideContainer">
+		<section class="panel blue">
+			<b>ONE</b>
+		</section>
+		<section class="panel turqoise">
+			<b>TWO</b>
+		</section>
+		<section class="panel green">
+			<b>THREE</b>
+		</section>
+		<section class="panel bordeaux">
+			<b>FOUR</b>
+		</section>
+	</div>
 </div>
 
 @endsection

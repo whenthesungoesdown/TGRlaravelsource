@@ -7,15 +7,17 @@ var final = document.querySelector(".finaltotal").textContent;
 var discount;
 var newtotal;
 var finaltotal = 0;
+var couponinput = document.querySelector(".coupon");
+var submitbutton = document.querySelector(".submit");
 
-var discount = [
+var coupons = [
     {
         couponName: "Rakhi50",
-        discount: 1 / 5
+        discount: 20
     },
     {
         couponName: "Diwali50",
-        discount: 1 / 2
+        discount: 50
     }
 ];
 
@@ -32,19 +34,26 @@ var count = 1;
 quantity.value = count;
 //add click listners
 plus.addEventListener("click", function() {
-    if (count < 10) {
-        count++;
-    }
+    // if (count < 10) {
+    //     count++;
+    // }
     quantity.value = count;
     totalprice = count * price;
     total.textContent = totalprice;
+
 });
 
 minus.addEventListener("click", function() {
-    if (count > 1) {
-        count--;
-    }
+    // if (count > 1) {
+    //     count--;
+    // }
     quantity.value = count;
     totalprice = count * price;
-    total.textContent = totalprice;
+    total.textContent = totalprice;\
+});
+
+submitbutton.addEventListener("click", function() {
+    for (var i = 0; i < coupons.length; i++) {
+        if (coupons[i].couponName == couponinput.value) alert("true");
+    }
 });

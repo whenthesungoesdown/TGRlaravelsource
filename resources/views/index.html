@@ -1,58 +1,107 @@
-<script>
-    //Number Picker Plugin - TobyJ
-    (function($) {
-        $.fn.numberPicker = function() {
-            var dis = "disabled";
-            return this.each(function() {
-                var picker = $(this),
-                    p = picker.find("button:last-child"),
-                    m = picker.find("button:first-child"),
-                    input = picker.find("input"),
-                    min = parseInt(input.attr("min"), 10),
-                    max = parseInt(input.attr("max"), 10),
-                    inputFunc = function(picker) {
-                        var i = parseInt(input.val(), 10);
-                        if (i <= min || !i) {
-                            input.val(min);
-                            p.prop(dis, false);
-                            m.prop(dis, true);
-                        } else if (i >= max) {
-                            input.val(max);
-                            p.prop(dis, true);
-                            m.prop(dis, false);
-                        } else {
-                            p.prop(dis, false);
-                            m.prop(dis, false);
-                        }
-                    },
-                    changeFunc = function(picker, qty) {
-                        var q = parseInt(qty, 10),
-                            i = parseInt(input.val(), 10);
-                        if ((i < max && q > 0) || (i > min && !(q > 0))) {
-                            input.val(i + q);
-                            inputFunc(picker);
-                        }
-                    };
-                m.on("click", function() {
-                    changeFunc(picker, -1);
-                });
-                p.on("click", function() {
-                    changeFunc(picker, 1);
-                });
-                input.on("change", function() {
-                    inputFunc(picker);
-                });
-                inputFunc(picker); //init
-            });
-        };
-    })(jQuery);
+<section id="trigger" class="heading intro-section">
+    <div class="packbox-wrapper container" style="">
+        <div
+            data-scrollmagic-pin-spacer=""
+            class="scrollmagic-pin-spacer"
+            style="top: auto; left: auto; bottom: auto; right: auto; margin: 0px; display: block; position: relative; box-sizing: content-box; min-height: 578px; height: auto;"
+        >
+            <div class="packbox-container" style="position: relative; margin: auto; top: 433.5px; left: 0px; bottom: auto; right: auto; box-sizing: border-box; width: 100%;">
+                <div class="home-intro" style="transform: matrix(1, 0, 0, 1, 0, -1000); opacity: 0;">
+                    <h1 class="wow fadeIn" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="10" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                        Create your<br />Custom Box
+                    </h1>
+                    <p class="wow fadeIn securityShow" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="100" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                        Bring your ideas to life &amp; Make your brand stand out.
+                    </p>
+                    <a
+                        class="to-end-boxs primary-btn wow fadeIn securityShow"
+                        data-wow-duration="0s"
+                        data-wow-delay="0s"
+                        data-wow-offset="100"
+                        href="#"
+                        style="visibility: visible; animation-duration: 0s; animation-delay: 0s;"
+                        >Let's do it</a
+                    >
+                </div>
+                <div
+                    class="packbox size-s col-lg-3 col-lg-offset-0 col-md-5 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+                    id="folding-box-home"
+                    src="https://packwire.com/images/home/boxs/yellow-folding.png"
+                    style="transform: matrix(1, 0, 0, 1, 0, 0);"
+                >
+                    <a href="/folding-box">
+                        <div class="packbox-img wow fadeIn" data-wow-duration="0s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                            <img class="size-s" src="https://packwire.com/images/home/boxs/yellow-folding.png" alt="Folding Box" />
+                        </div>
+                    </a>
+                    <div class="packbox-desc" style="opacity: 1;">
+                        <a href="/folding-box">
+                            <h3>Folding Box</h3>
+                            <p>This slim box style is perfect for showcasing smaller products.</p> </a
+                        ><a class="primary-btn" href="/folding-box">Customize it</a>
+                    </div>
+                </div>
+                <div
+                    class="packbox size-m col-lg-3 col-lg-offset-0 col-md-5 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+                    id="rigid-box-home"
+                    src="https://packwire.com/images/home/boxs/yellow-rigid.png"
+                    style="transform: matrix(1, 0, 0, 1, 0, 0);"
+                >
+                    <a href="/rigid-box">
+                        <div class="packbox-img wow fadeIn" data-wow-duration="0s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                            <img class="size-m" src="https://packwire.com/images/home/boxs/yellow-rigid.png" alt="Rigid Box" />
+                        </div>
+                    </a>
+                    <div class="packbox-desc" style="opacity: 1;">
+                        <a href="/rigid-box">
+                            <h3>Rigid Box</h3>
+                            <p>An elegant approach to packaging, the rigid gift box just oozes with luxury.</p> </a
+                        ><a class="primary-btn" href="/rigid-box">Customize it</a>
+                    </div>
+                </div>
+                <div
+                    class="packbox size-l col-lg-3 col-lg-offset-0 col-md-5 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+                    id="mailer-box-home"
+                    src="https://packwire.com/images/home/boxs/yellow-mailer.png"
+                    style="transform: matrix(1, 0, 0, 1, 0, 0);"
+                >
+                    <a href="/mailer-box">
+                        <div class="packbox-img wow fadeIn" data-wow-duration="0s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                            <img class="size-l" src="https://packwire.com/images/home/boxs/yellow-mailer.png" alt="Mailer Box" />
+                        </div>
+                    </a>
+                    <div class="packbox-desc" style="opacity: 1;">
+                        <a href="/mailer-box">
+                            <h3>Mailer Box</h3>
+                            <p>The best way to ship out your goods but with an added WOW factor.</p> </a
+                        ><a class="primary-btn" href="/mailer-box">Customize it</a>
+                    </div>
+                </div>
+                <div
+                    class="packbox size-xl col-lg-3 col-lg-offset-0 col-md-5 col-sm-5 col-sm-offset-1 col-xs-10 col-xs-offset-1"
+                    id="shipping-box-home"
+                    src="https://packwire.com/images/home/boxs/yellow-shipping.png"
+                    style="transform: matrix(1, 0, 0, 1, 0, 0);"
+                >
+                    <a href="/shipping-box">
+                        <div class="packbox-img wow fadeIn" data-wow-duration="0s" data-wow-delay="0s" style="visibility: visible; animation-duration: 0s; animation-delay: 0s;">
+                            <img class="size-xl" src="https://packwire.com/images/home/boxs/yellow-shipping.png" alt="Shipping Box" />
+                        </div>
+                    </a>
+                    <div class="packbox-desc" style="opacity: 1;">
+                        <a href="/shipping-box">
+                            <h3>Shipping Box</h3>
+                            <p>The shipping box is your big ol' moving box. Custom printed with your branding.</p> </a
+                        ><a class="primary-btn" href="/shipping-box">Customize it</a>
+                    </div>
+                </div>
 
-    $(document).on("ready", function() {
-        $(".plusminus").numberPicker();
-
-        //add dynamically:
-        $('<div class="plusminus horiz"><button></button><input type="number" name="qty" value="1" min="1" max="5"><button></button></div>')
-            .numberPicker()
-            .appendTo("body");
-    });
-</script>
+                <div class="brand-logo-home brand-logo-home-mobile" style="opacity: 0;">
+                    <p style="color: white; margin: 0 0 8px -2px;">Trusted by these brands</p>
+                    <img class="brand-logo-item" src="https://d33wubrfki0l68.cloudfront.net/c8ded77f6605db7ec5c6aa8e9e9e2067d336d6fb/8e385/home/brands_1.png" alt="our clients" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bottom"></div>
+</section>

@@ -43,10 +43,11 @@
             <p>Please enter a coupon code</p>
         </div>
         <div class="col-3 py-2 my-2">
-            <input style="border-radius:10px" type="text" name="couponcode" id="#coupon">
+            <input style="border-radius:10px" type="text" name="couponcode" class=".coupon">
+            <button class="btn btn-success" class=".submit">submit</button>
         </div>
         <div class="col-1 py-1 my-1">
-            <p>Dicsount</p>
+            <p>Discount</p>
         </div>
         <div class="col-2 py-1 my-1">₹<span class="finaltotal"></span>.00</div>
     </div>
