@@ -74,7 +74,7 @@
                                             </a>
                                             <nav class="shift">
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                    <a class="dropdown-item" href="/index">Profile</a>
+                                                    <a class="dropdown-item" href="/profile">Profile</a>
                                                     <a class="dropdown-item" href="#">MY orders</a>
                                                     <a class="dropdown-item" href="#">Change password</a>
                                                     <a class="dropdown-item" href="#">Logout</a>
@@ -91,7 +91,13 @@
                                                 <ion-icon name="cart"></ion-icon>
                                             </a>
                                         </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link" href="/cart">
+                                                    <ion-icon name="search"></ion-icon>
+                                                </a>
+                                            </li>
                                     </ul>
+                                    
                                 </nav>
                             </div>
                         </nav>

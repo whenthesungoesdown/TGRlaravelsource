@@ -3,6 +3,7 @@ use App\Login;
 use App\Register;
 use App\User;
 use App\Product;
+use App\Cart;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,44 +14,34 @@ use App\Product;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('home');
 });
-
 Route::get('/delete',function(){
-
-    Product::destroy([5,6,7]);
+    Cart::destroy([1]);
 });
-
+Route::get('/deleterecords',function(){
+    Cart::truncate();
+});
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
-
-
 /*----------------------ROUTES FOR LOGIN & REGISTER-------------------------------------*/
 Route::get('/reg','RegisterAuthController@showRegister')->name('reg');
 Route::post('/reg','RegisterAuthController@registration');
 Route::get('/log','Auth\LoginController@showLogin')->name('log');
 Route::post('/log','Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
-
 /*----------------------ROUTES FOR CART-------------------------------------*/
 Route::get('/', 'ProductsController@index');
-Route::get('/cart', 'ProductsController@cart')->name('cart');
-Route::post('/add-to-cart', 'ProductsController@add_to_cart')->name('addtocart');
-Route::get('/{id}','ProductsController@show')->name('product_page');
-
+Route::any('/cart', 'ProductsController@cart')->name('cart');
+Route::get('/add-to-cart', 'ProductsController@addtocart')->name('addtocart');
+// Route::get('/{id}','ProductsController@show')->name('product_page');
 /*-----------------------FORGOT-PASSWORD--------------------------------------*/ 
-
  Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
  Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
  Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
  Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
-
-
  Route::get('/mail','SendEmailController@send');
-
  /*-----------------------------OTHER-ROUTES--------------------------------------*/
  Route::get('/about',function(){
     return view('about');
@@ -85,6 +76,7 @@ Route::get('/shippingandreturn',function(){
 Route::get('/termsandconditions',function(){
     return view('tandc');
 });
+Route::resource('/','ProductsController');
 // Route::get('/existinguser',function(){
 //     return view('existinguser');
 // });
@@ -97,3 +89,16 @@ Route::get('/termsandconditions',function(){
 // Route::get('/resetpassword',function(){
 //     return view('forgotpassword');
 // });
+
+
+Route::get('/wishlist', function(){
+    return view('wishlist');
+});
+
+Route::get('/reset', function(){
+    return view('changepassword');
+});
+
+Route::get('/profile', function(){
+    return view('profile');
+});

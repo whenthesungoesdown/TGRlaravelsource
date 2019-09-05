@@ -22,7 +22,7 @@ plus.addEventListener("click", function() {
     }
     quantity.value = count;
     // total.textContent = totalprice;
-    console.log(count);
+    // console.log(count);
 });
 
 minus.addEventListener("click", function() {
@@ -31,7 +31,7 @@ minus.addEventListener("click", function() {
     }
     quantity.value = count;
     // total.textContent = totalprice;
-    console.log(count);
+    // console.log(count);
 });
 
 // console.log(quantity.value);

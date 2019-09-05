@@ -1,14 +1,17 @@
 @extends('layout.thegoodroad')
 @section('content')
+
 <div class="container px-5 mx-5 mb-5">
+@foreach($product as $prod)
     <div class="row jsutify-content-center">
         <div class="col-12">
-            <p class="text-center main-text">{{$product->title}}</p>
+
+            <p class="text-center main-text">{{$prod->title}}</p>
         </div>
     </div>
     <div class="row jsutify-content-center">
         <div class="col-12">
-            <p class="text-center sub-text">By {{$product->brand}}</p>
+            <p class="text-center sub-text">By {{$prod->brand}}</p>
         </div>
     </div>
     <div class="row justify-content-around">
@@ -16,9 +19,9 @@
             <div class="exzoom" id="exzoom">
                 <div class="exzoom_img_box">
                     <ul class='exzoom_img_ul'>
-                        <li><img src="{{$product->pic1}}" /></li>
-                        <li><img src="{{$product->pic2}}" /></li>
-                        <li><img src="{{$product->pic3}}" /></li>
+                        <li><img src="{{$prod->pic1}}" /></li>
+                        <li><img src="{{$prod->pic2}}" /></li>
+                        <li><img src="{{$prod->pic3}}" /></li>
                     </ul>
                 </div>
                 <div class="exzoom_nav"></div>
@@ -27,46 +30,75 @@
         <div class="about-product col-sm-12 col-md-6">
             <ul>
                 <li>
-                    <p class="product-price" style="font-size:30px"><b>₹{{$product->price}}.00</b></p>
+                    <p class="product-price" style="font-size:30px"><b>₹{{$prod->price}}.00</b></p>
                 </li>
 
                 <li>
-                    <p class="description">{{$product->description}}</p>
+                    <p class="description">{{$prod->description}}</p>
                 </li>
-                @if(count($product->note) > 0)
+                @if(count($prod->note) > 0)
                 <li>
-                    <p class="specification"><b>Specifications -</b> {{$product->note}}</p>
-                </li>
-                @endif
-                @if(count($product->material) > 0)
-                <li>
-                    <p class="material"><b>Material -</b> {{$product->material}}</p>
+                    <p class="specification"><b>Specifications -</b> {{$prod->note}}</p>
                 </li>
                 @endif
+                @if(count($prod->material) > 0)
                 <li>
+                    <p class="material"><b>Material -</b> {{$prod->material}}</p>
+                </li>
+                @endif
+                <li>
+
                     <div class="row justify-content-around">
                         <div class="col-6">
+
                             <h4 class="mb-5" style="border-bottom:1px solid black; width: 120%">Choose Quantity</h4>
                         </div>
+
                         <div class="col-6">
+
                             <div class="plusminus horiz">
+
                                 <button class="minus">-</button>
-                                <input class="productQty" type="number" name="productQty" />
+
+                                <input class="productQty" type="number" name=$prodQty" id="qty2">
                                 <button class="plus">+</button>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-start">
-                        <div class="col-1"><a href="#">
-                                <ion-icon class="wishlist" name="heart-empty"></ion-icon>
-                            </a></div>
-                        <div class="col-1"><a href="/add-to-cart">
-                                <ion-icon class="cart" name="cart"></ion-icon>
-                            </a></div>
+                        <form name="addtocartform" id="addtocartform" action="{{route('addtocart')}}" method="get">
+                            {{csrf_field()}}
+                            <input type="hidden" name="product_id" value="{{$prod->id}}">
+                            <input type="hidden" name="product_name" value="{{$prod->title}}">
+                            <input type="hidden" name="price" value="{{$prod->price}}">
+                            <input type="hidden" name="quantity" id="qty1" class="finalquantity">
+
+                            <!-- <button type="submit"  value="submit">  -->
+
+                            <div class="col-1">
+                                <a href="#">
+                                    <ion-icon class="wishlist" name="heart-empty"></ion-icon>
+                                </a></div>
+                            <div class="col-1">
+                                <a href="{{route('addtocart')}}">
+                                    <button type="submit" value="submit" style="background-color:transparent; border:0px;">
+                                        <ion-icon class="cart" name="cart"></ion-icon>
+                                    </button>
+                                </a>
+                            </div>
+
+                        </form>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
+@endforeach
 </div>
+
+
 @endsection
+
+@section('jsscript')
+    <script src="{{asset('Files/JS/main.js')}}"></script>
+@stop

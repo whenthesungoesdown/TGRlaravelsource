@@ -4,75 +4,36 @@ use Illuminate\Http\Request;
 use App\Product;
 use DB;
 use App\Cart;
+use Session;
+use Illuminate\Support\Facades\Input;
 class ProductsController extends Controller
 {
-    //
-    // public function index(){
-    //  //   return view('home');
-    //  return $products=Product::all();
-     
-    // }
-    public function cart(){
-        return view('cart');
-    }
-    public function add_to_cart($id){
-        {
-            $product = product::find($id);
-     
-            if(!$product) {
-     
-                abort(404);
-     
-            }
-     
-            $cart = session()->get('cart');
-     
-            // if cart is empty then this the first product
-            if(!$cart) {
-     
-                $cart = [
-                        $id => [
-                            "product_name" => $product->Product_Name,
-                            "quantity" => 1,
-                            "price" => $product->Price,
-                            
-                        ]
-                ];
-     
-                session()->put('cart', $cart);
-     
-                return redirect()->back()->with('success', 'Product added to cart successfully!');
-            }
-     
-            // if cart not empty then check if this product exist then increment quantity
-            if(isset($cart[$id])) {
-     
-                $cart[$id]['quantity']++;
-     
-                session()->put('cart', $cart);
-     
-                return redirect()->back()->with('success', 'Product added to cart successfully!');
-     
-            }
-     
-            // if item not exist in cart then add to cart with quantity = 1
-            $cart[$id] = [
-                "product_name" => $product->Product_Name,
-                "quantity" => 1,
-                "price" => $product->Price,
-                            
-            ];
-     
-            session()->put('cart', $cart);
-     
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
-        }
-        return view('cart');
-    }
  public function addtocart(Request $request){
-$data=$request->all();
-echo "<pre>"; print_r($data);
+    $session_id=Session::get('session_id');
+    
+    if(empty($session_id)){
+$session_id=str_random('40');
+Session::put('session_id',$session_id);
+    }
+    
+$prod=new Cart;
+$prod->product_name=request('product_name');
+$prod->product_id=request('product_id');
+$prod->price=request('price');
+$prod->quantity=request('quantity');
+$prod->session_id=$session_id;
+$prod->pic=DB::table('products')->select('pic1')->where('id',request('product_id'))->get();
+$prod->save();
+return redirect('cart')->with('flash_message_success','Product has been added into the cart successfully');
  }
+ public function cart(){
+ 
+   
+    $session_id=Session::get('session_id');
+    $userCart=DB::table('cart')->where(['session_id'=>$session_id])->get();
+        //return view('cart')->with('userCart',$userCart);
+   return view('cart',compact(['userCart']));
+}
  public function index()
  {
      $products =  product::all();
@@ -80,8 +41,9 @@ echo "<pre>"; print_r($data);
  }
  public function show($id)
  {
-     $product = product::find($id);
-     return view('product')->with('product' ,  $product);
+     $product = product::where('id',$id)->get();
+    //return view('product')->with('product' ,  $product);
+    return view('product',compact(['product']));
  }
    
 }

@@ -42,18 +42,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="{{asset('Files/JS/main.js')}}"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
     <script src="{{asset('Files/JS/sweetalert2.all.js')}}"></script>
     <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.0/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>
-    <script src="{{asset('Files/JS/debug.addIndicators.min.js')}}"></script> --}}
 
-    <script src="{{asset('Files/JS/cart.js')}}"></script>
-    <script src="{{asset('Files/JS/custombox.js')}}"></script>
+    @yield('jsscripts')
 
 
 
@@ -138,6 +132,26 @@
                 "autoPlay": false
                 });
     </script>
+    {{-- <script>
+        $(function() {
+  // contact form animations
+  $(".add-address").click(function() {
+    $(".popup").fadeToggle();
+  });
+  $(document).mouseup(function(e) {
+    var container = $(".popup");
+
+    if (
+      !container.is(e.target) && // if the target of the click isn't the container...
+      container.has(e.target).length === 0
+    ) {
+      // ... nor a descendant of the container
+      container.fadeOut();
+    }
+  });
+});
+    
+    </script> --}}
     
 </body>
 
