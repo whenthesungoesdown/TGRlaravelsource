@@ -68,9 +68,9 @@
 @extends('layout.thegoodroad')
 @section('content')
 
-{{-- <div class="container-fluid px-2 mx-0 main"> --}}
-    {{-- <p class="text-main text-center py-2 my-2">
-        Step:1</br> Select one of the boxes below.
+<div class="container-fluid px-2 mx-0 main">
+    <p class="text-main text-center py-2 my-2">
+        <img class="serialSmall" src="{{asset('files/image/serial (1).png')}}" alt=""> : Select one of the boxes below.
     </p>
     <div class="row justify-content-center">
         <div class="col-6 pl-5">
@@ -103,24 +103,10 @@
         </div>
     </div>
     <p class="text-main text-center py-2 my-2">
-        Step:2</br> Select items from below to add into your box.
+        <img class="serialSmall" src="{{asset('files/image/serial (2).png')}}" alt=""> : Select items from below to add into your box.
     </p>
-</div> --}}
-<div id="pinContainer">
-	<div id="slideContainer">
-		<section class="panel blue">
-			<b>ONE</b>
-		</section>
-		<section class="panel turqoise">
-			<b>TWO</b>
-		</section>
-		<section class="panel green">
-			<b>THREE</b>
-		</section>
-		<section class="panel bordeaux">
-			<b>FOUR</b>
-		</section>
-	</div>
+    @include('components.productsLayout')
 </div>
+
 
 @endsection

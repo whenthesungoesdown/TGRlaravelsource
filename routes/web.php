@@ -33,9 +33,10 @@ Route::post('/log','Auth\LoginController@login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 /*----------------------ROUTES FOR CART-------------------------------------*/
 Route::get('/', 'ProductsController@index');
+Route::get('/custombox', 'ProductsController@custombox');
 Route::any('/cart', 'ProductsController@cart')->name('cart');
 Route::get('/add-to-cart', 'ProductsController@addtocart')->name('addtocart');
-// Route::get('/{id}','ProductsController@show')->name('product_page');
+Route::get('/show/{id}','ProductsController@show')->name('product_page');
 /*-----------------------FORGOT-PASSWORD--------------------------------------*/ 
  Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
  Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -61,9 +62,9 @@ Route::get('/giftcard',function(){
 Route::get('/contactus',function(){
     return view('contactus');
 });
-Route::get('/custombox',function(){
-    return view('custombox');
-});
+// Route::get('/custombox',function(){
+//     return view('custombox');
+// });
 Route::get('/faq',function(){
     return view('faq');
 });

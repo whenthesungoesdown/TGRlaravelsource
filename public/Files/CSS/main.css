@@ -147,6 +147,11 @@ ion-icon:hover {
     width: 100px;
 }
 
+.serialSmall {
+    height: 40px;
+    width: 40px;
+}
+
 .productimage {
     height: 220px;
     width: 220px;
@@ -412,7 +417,7 @@ h1 {
     background-clip: padding-box;
     text-align: center;
 }
-
+/* 
 .button {
     font-size: 1em;
     padding: 10px;
@@ -425,7 +430,7 @@ h1 {
 }
 .button:hover {
     background: #06d85f;
-}
+} */
 
 .overlay {
     position: fixed;
@@ -470,7 +475,7 @@ h1 {
     color: #333;
 }
 
-.save{
+.save {
     transition: all 200ms;
     text-decoration: none;
 }
@@ -489,4 +494,55 @@ h1 {
     .popup {
         width: 100%;
     }
+}
+
+/* *searchbar */
+
+#search {
+    width: 357px;
+    margin: 4px;
+}
+#search_text {
+    width: 170px;
+    padding: 15px 0 15px 20px;
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    border: 0 none;
+    height: 52px;
+    margin-right: 0;
+    color: white;
+    outline: none;
+    background: #73d0d7;
+    float: left;
+    box-sizing: border-box;
+    transition: all 0.15s;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: white;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: white;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: white;
+}
+#search_text:focus {
+    background: #28848a;
+}
+#search_button {
+    border: 0 none;
+    background: #345a5d url('../image/_ionicons_svg_md-search.svg') center no-repeat;
+    width: 40px;
+    float: left;
+    padding: 0;
+    text-align: center;
+    height: 52px;
+    cursor: pointer;
 }

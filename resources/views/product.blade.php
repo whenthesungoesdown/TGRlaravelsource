@@ -19,9 +19,9 @@
             <div class="exzoom" id="exzoom">
                 <div class="exzoom_img_box">
                     <ul class='exzoom_img_ul'>
-                        <li><img src="{{$prod->pic1}}" /></li>
-                        <li><img src="{{$prod->pic2}}" /></li>
-                        <li><img src="{{$prod->pic3}}" /></li>
+                        <li><img src="{{asset($prod->pic1)}}" /></li>
+                        <li><img src="{{asset($prod->pic2)}}" /></li>
+                        <li><img src="{{asset($prod->pic3)}}" /></li>
                     </ul>
                 </div>
                 <div class="exzoom_nav"></div>
@@ -57,11 +57,9 @@
                         <div class="col-6">
 
                             <div class="plusminus horiz">
-
-                                <button class="minus">-</button>
-
-                                <input class="productQty" type="number" name=$prodQty" id="qty2">
-                                <button class="plus">+</button>
+                                <button class="minus minus-product">-</button>
+                                <input class="productQty productQty-product" type="number" name="productQty" id="qty2">
+                                <button class="plus plus-product">+</button>
                             </div>
                         </div>
                     </div>
@@ -71,7 +69,7 @@
                             <input type="hidden" name="product_id" value="{{$prod->id}}">
                             <input type="hidden" name="product_name" value="{{$prod->title}}">
                             <input type="hidden" name="price" value="{{$prod->price}}">
-                            <input type="hidden" name="quantity" id="qty1" class="finalquantity">
+                            <input type="hidden" name="quantity" id="qty1" class="finalquantity finalquantityProduct">
 
                             <!-- <button type="submit"  value="submit">  -->
 

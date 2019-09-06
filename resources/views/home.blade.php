@@ -146,6 +146,11 @@
         </div>
     </div>
 
+    <div class="pt-3 mt-3">
+            <h3 class="text-center">FEATURED PRODUCTS</h3>
+            <P class="text-center">Featured collection curated by our experts</P>
+        </div>
+
     <!-- products layout -->
     @include('components.productsLayout')
 

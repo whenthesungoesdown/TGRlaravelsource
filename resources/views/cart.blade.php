@@ -35,9 +35,9 @@
         <div class="col-2 py-3 my-3">₹<span class="price">{{$cart->price}}</span></div>
         <div class="col-2 py-3 my-3">
             <div class="plusminus horiz">
-                <button class="minus">-</button>
-                <input class="productQty" type="number" name="productQty">
-                <button class="plus">+</button>
+                <button class="minus minus-cart">-</button>
+                <input class="productQty productQty-cart" type="number" name="productQty">
+                <button class="plus plus-cart">+</button>
             </div>
         </div>
         <div class="col-2 py-3 my-3">₹<span class="totalprice"></span>.00</div>
@@ -54,11 +54,11 @@
         <div class="col-1 py-1 my-1">
             <p>Discount</p>
         </div>
-        <div class="col-2 py-1 my-1">₹<span class="discount">0</span>.00</div>
+        <div class="col-2 py-1 my-1">₹<span class="discount dicsount-cart">0</span>.00</div>
     </div>
     <div class="row border-bottom justify-content-end">
         <div class="col-2 py-1 my-1">Total</div>
-        <div class="col-2 py-1 my-1">₹<span class="finaltotal"></span>.00</div>
+        <div class="col-2 py-1 my-1">₹<span class="finaltotal finaltotal-cart"></span>.00</div>
     </div>
 
     <div class="row border-bottom justify-content-end">

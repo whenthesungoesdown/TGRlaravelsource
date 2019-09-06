@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{{asset('Files/CSS/sweetalert2.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}" />
+    <link rel="stylesheet" href="{{asset('Files/CSS/normalize.css')}}" />
 </head>
 
 <body>
@@ -46,8 +47,9 @@
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
     <script src="{{asset('Files/JS/sweetalert2.all.js')}}"></script>
     <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
+    <script src="{{asset('Files/JS/main.js')}}"></script>
 
-    @yield('jsscripts')
+   
 
 
 

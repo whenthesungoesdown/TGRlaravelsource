@@ -42,8 +42,13 @@ return redirect('cart')->with('flash_message_success','Product has been added in
  public function show($id)
  {
      $product = product::where('id',$id)->get();
-    //return view('product')->with('product' ,  $product);
+    // return view('product')->with('product' ,  $product);
     return view('product',compact(['product']));
+ }
+
+ public function custombox(){
+    $products =  product::all();
+    return view('custombox')->with('products' , $products);
  }
    
 }

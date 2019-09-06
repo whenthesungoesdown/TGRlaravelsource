@@ -4,8 +4,8 @@
     <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
         <div class="row justify-content-around align-items-center">
             <div class="col-sm-12">
-                <a class="navbar-brand py-0 my-0" href="/"><img class="logo" src="{{ asset('Files/image/TGRmainlogo.png') }}"
-                        alt="" /></a>
+                <a class="navbar-brand py-0 my-0" href="/"><img class="logo"
+                        src="{{ asset('Files/image/TGRmainlogo.png') }}" alt="" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -91,13 +91,14 @@
                                                 <ion-icon name="cart"></ion-icon>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
-                                                <a class="nav-link" href="/cart">
-                                                    <ion-icon name="search"></ion-icon>
-                                                </a>
-                                            </li>
+                                        <li class="nav-item search">
+                                            <form action="" method="get">
+                                                <input type="text" name="search_text" id="search_text" placeholder="Search"/>
+                                                <input type="button" name="search_button" id="search_button">
+                                            </form>
+                                        </li>
                                     </ul>
-                                    
+
                                 </nav>
                             </div>
                         </nav>

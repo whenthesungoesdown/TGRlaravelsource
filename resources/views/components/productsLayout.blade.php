@@ -52,29 +52,22 @@
 </div>
 </div> --}}
 
-<div class="pt-3 mt-3">
-    <h3 class="text-center">FEATURED PRODUCTS</h3>
-    <P class="text-center">Featured collection curated by our experts</P>
-</div>
+
 
 
 
 <div class="conatiner-fluid pr-4 mr-4">
     @foreach($products->chunk(4) as $items)
     <div class="row justify-content-around">
-        @if(count($items) > 0)
-            @foreach($items as $item)
-                <div class="col-sm-12 col-md-4 col-lg-2">
-                    <div class="hover-img">
-                        <a href="/{{$item->id}}"><img class="productimage" src="{{$item->pic1}}" alt=""></a>
-                        <h5 class="producttitle text-center">{{$item->title}}</h5>
-                        <p class="text-center price" style="margin-left:40px">₹{{$item->price}}.00</p>
-                    </div>
+        @foreach($items as $item)
+            <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="hover-img">
+                    <a href="/show/{{$item->id}}"><img class="productimage" src="{{$item->pic1}}" alt=""></a>
+                    <h5 class="producttitle text-center">{{$item->title}}</h5>
+                    <p class="text-center price" style="margin-left:40px">₹{{$item->price}}.00</p>
                 </div>
-            @endforeach
-        @else
-            <p>no products</p>
-        @endif
+            </div>
+        @endforeach
     </div>
     @endforeach
 </div>
