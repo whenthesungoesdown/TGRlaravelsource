@@ -1,4 +1,4 @@
-@extends('layout.thegoodroad')
+@extends('layouts.thegoodroad')
 @section('content')
 <div class="row corporatetop">
         <div class="col"><img src="{{asset('Files/Image/corporate1.jpg')}}" alt="" /></div>

@@ -1,4 +1,4 @@
-{{-- @extends('layout.thegoodroad')
+{{-- @extends('layouts.thegoodroad')
 @section('content')
 <div class="row justify-content-center">
     <div class="col-8"><img class="stepsimg" src="{{asset('Files/Image/steps.png')}}" alt=""></div>
@@ -29,7 +29,7 @@
         </div>
     </div>
 @endsection --}}
-{{-- @extends('layout.thegoodroad')
+{{-- @extends('layouts.thegoodroad')
 @section('content')
 <div class="container">
     <div class="row align-items-center">
@@ -70,43 +70,41 @@
 
 <div class="container-fluid px-2 mx-0 main">
     <p class="text-main text-center py-2 my-2">
-        <img class="serialSmall" src="{{asset('files/image/serial (1).png')}}" alt=""> : Select one of the boxes below.
+        Step:1</br> Select one of the boxes below.
     </p>
     <div class="row justify-content-center">
-        <div class="col-6 pl-5">
+        <div class="col-6">
             <div class="row justify-content-between">
-                <div class="col-3 px-0 mx-0">
-                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box3.png')}}" alt="">
+                <div class="col">
+                    <img class="boximg py-1" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box2.png')}}" alt="">
                 </div>
-                <div class="col-3 px-0 mx-0">
-                    <img class="boximg mt-5" src="{{asset('Files/Image/customBox/box1.png')}}" alt="">
+                <div class="col">
+                    <img class="boximg mt-5" src="{{asset('Files/Image/customBox/box3.png')}}" alt="">
                 </div>
-                <div class="col-3 px-0 mx-0">
+                <div class="col">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box4.png')}}" alt="">
                     <img class="boximg py-1" src="{{asset('Files/Image/customBox/box5.png')}}" alt="">
                 </div>
-                <div class="col-3 px-0 mx-0">
+                <div class="col">
                     <p class="text-main pt-5 mt-5">+</p>
                 </div>
             </div>
         </div>
         <div class="col-6">
             <div class="added-to-cart">
-                <img class="selectedProducts" src="" alt="image">
-                <img class="selectedProducts" src="" alt="image">
-                <img class="selectedProducts" src="" alt="image">
-                <img class="selectedProducts" src="" alt="image">
-                <img class="selectedProducts" src="" alt="image">
-                <img class="selectedProducts" src="" alt="image">
+                <img src="" alt="boxImage">
+                <img src="" alt="boxImage">
+                <img src="" alt="boxImage">
+                <img src="" alt="boxImage">
+                <img src="" alt="boxImage">
+                <img src="" alt="boxImage">
             </div>
         </div>
     </div>
     <p class="text-main text-center py-2 my-2">
-        <img class="serialSmall" src="{{asset('files/image/serial (2).png')}}" alt=""> : Select items from below to add into your box.
+        Step:2</br> Select items from below to add into your box.
     </p>
-    @include('components.productsLayout')
 </div>
-
 
 @endsection

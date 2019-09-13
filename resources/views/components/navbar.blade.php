@@ -4,8 +4,8 @@
     <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
         <div class="row justify-content-around align-items-center">
             <div class="col-sm-12">
-                <a class="navbar-brand py-0 my-0" href="/"><img class="logo"
-                        src="{{ asset('Files/image/TGRmainlogo.png') }}" alt="" /></a>
+                <a class="navbar-brand py-0 my-0" href="/"><img class="logo" src="{{ asset('Files/image/TGRmainlogo.png') }}"
+                        alt="" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
                                 <nav class="shift">
                                     <ul class="navbar-nav mr-auto text">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="/existinguser" id="navbarDropdown"
+                                            <a class="nav-link dropdown-toggle" href="{{route('log')}}" id="navbarDropdown"
                                                 role="button" aria-haspopup="true" aria-expanded="false">
                                                 <ion-icon name="person"></ion-icon>
                                             </a>
@@ -76,13 +76,13 @@
                                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                                     <a class="dropdown-item" href="/profile">Profile</a>
                                                     <a class="dropdown-item" href="#">MY orders</a>
-                                                    <a class="dropdown-item" href="#">Change password</a>
-                                                    <a class="dropdown-item" href="#">Logout</a>
+                                                    <a class="dropdown-item" href="{{route('change_pwd')}}">Change password</a>
+                                                    <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
                                                 </div>
                                             </nav>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="/wishlist">
+                                            <a class="nav-link" href="{{route('showWishlist')}}">
                                                 <ion-icon name="heart-empty"></ion-icon>
                                             </a>
                                         </li>
@@ -92,13 +92,14 @@
                                             </a>
                                         </li>
                                         <li class="nav-item search">
-                                            <form action="" method="get">
+                                            <form action="{{route('search')}}" method="post">
+                                            @csrf
                                                 <input type="text" name="search_text" id="search_text" placeholder="Search"/>
-                                                <input type="button" name="search_button" id="search_button">
+                                                <button type="submit" name="search_button" id="search_button">
                                             </form>
                                         </li>
                                     </ul>
-
+                                    
                                 </nav>
                             </div>
                         </nav>
@@ -113,57 +114,3 @@
 
 
 
-{{-- <nav class="navbar navbar-expand-lg navbar-light justify-content-center p-0 m-0">
-    <div class="row justify-content-around align-items-center">
-        <div class="col-sm-12">
-            <a class="navbar-brand" href="/"><img class="logo" src="{{ asset('Files/image/TGRmainlogo.png') }}"
-alt="" /></a>
-</div>
-</div>
-</nav>
-<nav class="menu">
-    <ol>
-        <li class="menu-item">
-            <a href="/about">About Us</a>
-        </li>
-        <li class="menu-item">
-            <a href="#0">Shop</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><a href="/prepacked">Pre Packed Boxes</a></li>
-                <li class="menu-item"><a href="/custombox">Make Your Own Box</a></li>
-            </ol>
-        </li>
-        <li class="menu-item">
-            <a href="/monthlybox">Monthly Box</a>
-        </li>
-        <li class="menu-item">
-            <a href="#0">Services</a>
-            <ol class="sub-menu">
-                <li class="menu-item"><a href="/corporate">Corporate</a></li>
-                <li class="menu-item"><a href="/wedding">Weddings</a></li>
-                <li class="menu-item"><a href="/allotheroccasions">All Other Occasions</a></li>
-                <li class="menu-item"><a href="/giftcard">Gift Card</a></li>
-            </ol>
-        </li>
-        <li class="menu-item"><a href="/contactus">Contact Us</a></li>
-
-        <li class="menu-item">
-            <a href="#0">
-                <ion-icon name="person"></ion-icon>
-            </a>
-            <ol class="sub-menu">
-                <li class="menu-item"><a href="/">Profile</a></li>
-                <li class="menu-item"><a href="/">My Orders</a></li>
-                <li class="menu-item"><a href="/">Change Password</a></li>
-                <li class="menu-item"><a href="/">Logout</a></li>
-            </ol>
-        </li>
-
-        <li class="menu-item"><a href="/contactus">
-                <ion-icon name="heart-empty"></ion-icon>
-            </a></li>
-        <li class="menu-item"><a href="/contactus">
-                <ion-icon name="cart"></ion-icon>
-            </a></li>
-    </ol>
-</nav> --}}

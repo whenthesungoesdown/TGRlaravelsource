@@ -15,22 +15,22 @@
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="/faq">FAQ</a>
+                        <a class="text" href="">FAQ</a>
                     </div>
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="/privacy">PRIVACY POLICY</a>
+                        <a class="text" href="">PRIVACY POLICY</a>
                     </div>
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="/shippingandreturn">SHIPPING AND RETURN</a>
+                        <a class="text" href="">SHIPPING AND RETURN</a>
                     </div>
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="/termsandconditions">TERMS AND CONDITION</a>
+                        <a class="text" href="">TERMS AND CONDITION</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="outer">
                     <div class="button">
-                        <a class="text" href="/contactus">CONTACT US</a>
+                        <a class="text" href="">CONTACT US</a>
                     </div>
                 </div>
             </div>
@@ -79,16 +79,3 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-right">
-            <div class="col-sm-6">
-                <p>&copy; <b>Copyright</b> by The Good Road. </p>
-            </div>
-            <div class="col-sm-6">
-                <img src="{{asset('Files/Image/Payment (1).png')}}" alt="paymentmethods" class="py-1 my-1">
-                <img src="{{asset('Files/Image/Payment (2).png')}}" alt="paymentmethods" class="py-1 my-1">
-                <img src="{{asset('Files/Image/Payment (3).png')}}" alt="paymentmethods" class="py-1 my-1">
-            </div>
-        </div>
-    </div>
-</div>
-

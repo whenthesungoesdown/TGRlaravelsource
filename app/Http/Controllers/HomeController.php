@@ -1,7 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Product;
+
 class HomeController extends Controller
 {
     /**
@@ -13,6 +17,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
      * Show the application dashboard.
      *
@@ -20,7 +25,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users=Auth::user();
-        return view('home',compact('user'));
+    //     $products =  product::all();
+    // return view('home')->with('products' , $products);
+       
     }
+
+  
 }

@@ -1,4 +1,4 @@
-@extends('layout.thegoodroad')
+@extends('layouts.thegoodroad')
 @section('content')
 
     <div class="container my-3 py-3">

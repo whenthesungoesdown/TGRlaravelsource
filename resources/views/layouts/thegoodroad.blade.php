@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{asset('Files/CSS/sweetalert2.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/navbar.css')}}" />
     <link rel="stylesheet" href="{{asset('Files/CSS/custombox.css')}}" />
-    <link rel="stylesheet" href="{{asset('Files/CSS/normalize.css')}}" />
+    
 </head>
 
 <body>
@@ -47,9 +47,8 @@
     <script src="{{asset('Files/JS/owl.carousel.min.js')}}"></script>
     <script src="{{asset('Files/JS/sweetalert2.all.js')}}"></script>
     <script src="{{asset('Files/JS/jquery.exzoom.js')}}"></script>
-    <script src="{{asset('Files/JS/main.js')}}"></script>
 
-   
+    @yield('jsscripts')
 
 
 
@@ -134,26 +133,7 @@
                 "autoPlay": false
                 });
     </script>
-    {{-- <script>
-        $(function() {
-  // contact form animations
-  $(".add-address").click(function() {
-    $(".popup").fadeToggle();
-  });
-  $(document).mouseup(function(e) {
-    var container = $(".popup");
-
-    if (
-      !container.is(e.target) && // if the target of the click isn't the container...
-      container.has(e.target).length === 0
-    ) {
-      // ... nor a descendant of the container
-      container.fadeOut();
-    }
-  });
-});
-    
-    </script> --}}
+   
     
 </body>
 

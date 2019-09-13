@@ -1,4 +1,4 @@
-@extends('layout.thegoodroad')
+@extends('layouts.thegoodroad')
 @section('content')
 <div class="container-fluid mx-0 px-0">
     <div class="row">

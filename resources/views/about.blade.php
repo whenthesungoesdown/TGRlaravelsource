@@ -1,4 +1,4 @@
-@extends('layout.thegoodroad')
+@extends('layouts.thegoodroad')
 @section('content')
     <!-- main content -->
     <div class="row justify-content-center align-items-center px-5 py-5">

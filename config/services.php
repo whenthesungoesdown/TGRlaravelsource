@@ -44,11 +44,4 @@ return [
         ],
     ],
 
-    'facebook' => [
-        'client_id' => env('2682129891798585
-        '),
-        'client_secret' => env('a2e57c383de5ad58ceefe1dcf83da6d8'),
-        'redirect' => '/login/facebook/callback',
-    ],
-
 ];

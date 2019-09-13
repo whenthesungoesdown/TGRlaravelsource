@@ -1,9 +1,13 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 class PasswordResetController extends Controller
 {
     //
+
     public function showForgot(){
  
         return view('forgotpass');
@@ -93,3 +97,4 @@ class PasswordResetController extends Controller
         return response()->json($user);
     }
 }
+
